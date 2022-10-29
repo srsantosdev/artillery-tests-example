@@ -1,0 +1,13 @@
+{
+  "name": "performance",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "artillery": "^2.0.0-24"
+  },
+  "scripts": {
+    "execute": "artillery run --output reports/report.json artillery.yaml",
+    "generate:report": "artillery report reports/report.json"
+  }
+}

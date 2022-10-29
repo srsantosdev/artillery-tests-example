@@ -1,0 +1,18 @@
+config:
+  target: "http://localhost:3333"
+  phases:
+    - duration: 60
+      arrivalRate: 200
+      name: "200/s during 60s"
+    - duration: 60
+      arrivalRate: 200
+      maxVusers: 12000
+    - duration: 60
+      arrivalRate: 200
+      rampTo: 12000
+    - duration: 60
+      arrivalCount: 12000
+scenarios:
+  - flow:
+    - get: 
+        url: "/"
